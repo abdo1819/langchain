@@ -19,8 +19,11 @@ If the question does not seem related to the database, just return "I don't know
 
 SQL_SUFFIX = """Begin!
 
+you need to remove the single quotes around the table names in Action Input.
+Begin!
+
 Question: {input}
 Thought: I should look at the tables in the database to see what I can query.  Then I should query the schema of the most relevant tables.  I should filter to relevant results.  I should check distinct values before filtering.
 {agent_scratchpad}"""
 
-SQL_FUNCTIONS_SUFFIX = """I should look at the tables in the database to see what I can query.  Then I should query the schema of the most relevant tables.  I should filter to relevant results.  I should check distinct values before filtering."""
+SQL_FUNCTIONS_SUFFIX = """I should look at the tables in the database to see what I can query.  Then I should query the schema of the most relevant tables.  I should filter to relevant results.  I should check distinct values before filtering. I should remove the single quotes around the table names in Action Input"""
